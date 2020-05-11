@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Lascenify" title="Lascenify personal website" src="https://github.com/alxshelepenok/gatsby-starter-lumen/blob/gatsby-v2/.github/logo.png" width="140"> </br>
+    <img alt="Lascenify" title="Lascenify personal website" src="https://github.com/lascenify/lascenify.github.io/.github/logo.png" width="140"> </br>
     Lascenify personal website
 </h1>
 
