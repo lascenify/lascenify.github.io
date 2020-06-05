@@ -2,6 +2,7 @@
 
 module.exports = {
   url: 'https://lascenify.github.io/',
+  pathPrefix: '/',
   title: 'Ascensión Salmerón',
   subtitle: 'Android Developer',
   copyright: '© All rights reserved.',
