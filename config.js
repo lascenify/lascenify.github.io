@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lascenify.github.io',
-  pathPrefix: '/',
+  url: 'https://lascenify.github.io/',
   title: 'Ascensión Salmerón',
   subtitle: 'Android Developer',
   copyright: '© All rights reserved.',
@@ -12,7 +11,7 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'Blog',
       path: '/'
     },
     {
@@ -30,20 +29,9 @@ module.exports = {
     bio: 'Android Developer',
     contacts: {
       email: 'ascensalmanez@gmail.com',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: 'https://github.com/lascenify',
-      rss: '',
-      vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
-      line: '',
-      gitlab: '',
-      weibo: '',
-      codepen: '',
-      youtube: '',
-      soundcloud: '',
+      twitter: 'ascen_sal',
+      github: 'lascenify',
+      linkedin: 'ascensión-salmerón-ibáñez-492247159',
     }
   }
 };

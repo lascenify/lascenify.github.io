@@ -16,7 +16,7 @@
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js"
   },
-  "repository": "https://github.com/lascenify/lascenify.github.io",
+  "repository": "https://lascenify.github.io",
   "author": "Ascensión Salmerón <ascensalmanez@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -68,6 +68,7 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "netlify-cms": "^2.10.49",
     "netlify-cms-app": "^2.12.12",
     "node-sass": "^4.13.1",
     "normalize-scss": "^7.0.1",

@@ -9,19 +9,19 @@ const getContactHref = (name: string, contact: string) => {
     case 'github':
       href = `https://github.com/${contact}`;
       break;
-    case 'vkontakte':
+    /*case 'vkontakte':
       href = `https://vk.com/${contact}`;
       break;
     case 'telegram':
       href = `https://t.me/${contact}`;
-      break;
+      break;*/
     case 'email':
       href = `mailto:${contact}`;
       break;
     case 'linkedin':
       href = `https://www.linkedin.com/in/${contact}`;
       break;
-    case 'instagram':
+    /*case 'instagram':
       href = `https://www.instagram.com/${contact}`;
       break;
     case 'line':
@@ -44,7 +44,7 @@ const getContactHref = (name: string, contact: string) => {
       break;
     case 'soundcloud':
       href = `https://soundcloud.com/${contact}`;
-      break;
+      break;*/
     default:
       href = contact;
       break;
