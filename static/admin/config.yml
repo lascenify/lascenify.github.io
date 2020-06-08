@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: master
+  repo: lascenify/lascenify.github.io
+  site_domain: lascenify.netlify.app
 
 media_folder: "static/media"
 public_folder: "/media"
