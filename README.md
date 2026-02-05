@@ -1,214 +1,303 @@
-# Portfolio Interactivo
+# 🎨 Portfolio Interactivo - Ascen Salmerón
 
-Portfolio web con navegación temporal (pasado/presente/futuro) y cambio de contexto (trabajo/proyectos/ocio), donde el avatar y los paneles informativos se actualizan dinámicamente según el estado seleccionado.
+Portfolio web moderno e interactivo con navegación temporal (pasado/presente/futuro) y cambio de contexto dinámico (trabajo/proyectos/ocio). El avatar y los paneles informativos se actualizan automáticamente según la navegación del usuario.
 
-## Características
+![React](https://img.shields.io/badge/React-19.2-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?logo=vite)
 
-- ✨ Navegación temporal: Pasado, Presente, Futuro
-- 🎯 Tres contextos: Trabajo, Proyectos, Ocio
-- 🎨 Dark/Light mode con persistencia
-- 🌐 Internacionalización (Español/Inglés)
-- 🎭 Animaciones fluidas con Framer Motion
-- 📱 Diseño responsive
-- 📧 Formulario de contacto con EmailJS
-- ♿ Accesible y navegable por teclado
+---
 
-## Stack Técnico
+## ✨ Características Principales
 
-- **Framework**: React 18 + Vite
-- **Lenguaje**: TypeScript
-- **Estilos**: Tailwind CSS v3
-- **Animaciones**: Framer Motion
-- **i18n**: react-i18next
-- **Formulario**: EmailJS
+- 🕒 **Navegación Temporal Horizontal**: Timeline visual interactivo para navegar entre pasado, presente y futuro
+- 🎯 **Tres Contextos Dinámicos**: Trabajo 💼, Proyectos 🚀, Ocio 🎨 (solo visible en "presente")
+- 🎨 **Dark/Light Mode**: Tema oscuro/claro con persistencia en localStorage
+- 🌐 **Internacionalización**: Soporte completo para Español e Inglés con react-i18next
+- 🎭 **Animaciones Fluidas**: Transiciones suaves con Framer Motion
+- 📱 **Diseño Responsive**: Layout de dos columnas en desktop, apilado en mobile
+- 💫 **Carousel de Tecnologías**: Scroll infinito con logos reales desde DevIcon CDN
+- 📇 **Información de Contacto**: Cards interactivas con links directos (Email, GitHub, LinkedIn)
+- ♿ **Accesibilidad**: Navegable por teclado, ARIA labels, focus indicators
 
-## Estructura del Proyecto
+---
+
+## 🛠️ Stack Técnico
+
+### Core
+- **Framework**: React 19.2
+- **Lenguaje**: TypeScript 5.9
+- **Build Tool**: Vite 7.2
+- **Estilos**: Tailwind CSS 3.4
+
+### Librerías
+- **Animaciones**: Framer Motion 12.31
+- **Internacionalización**: react-i18next 16.5 + i18next 25.8
+- **Detección de Idioma**: i18next-browser-languagedetector 8.2
+
+### DevOps
+- **Linting**: ESLint 9 con TypeScript ESLint
+- **CSS Processing**: PostCSS + Autoprefixer
+- **Type Checking**: TypeScript estricto
+
+---
+
+## 📂 Estructura del Proyecto
 
 ```
 portfolio/
 ├── public/
-│   ├── avatars/           # 9 imágenes de avatar (timeline × contexto)
-│   └── technologies/      # Logos de tecnologías
+│   ├── avatars/              # 5 imágenes de avatar
+│   │   ├── past.png
+│   │   ├── present-work.png
+│   │   ├── present-projects.png
+│   │   ├── present-leisure.png
+│   │   └── future.png
+│   └── avatars/CONTACT_INFO_UPDATE.md  # Documentación de cambios
 ├── src/
-│   ├── components/        # Componentes React
-│   │   ├── Avatar/
-│   │   ├── Carousel/
-│   │   ├── ContactForm/
-│   │   ├── Layout/
-│   │   ├── Navigation/
-│   │   ├── Panels/
-│   │   └── UI/
-│   ├── contexts/          # Context API (Theme, Portfolio)
-│   ├── data/              # Datos del portfolio
-│   ├── hooks/             # Custom hooks
-│   ├── locales/           # Traducciones ES/EN
-│   ├── services/          # API services (EmailJS)
-│   ├── types/             # TypeScript types
-│   ├── utils/             # Utilidades (animaciones, constantes)
-│   └── config/            # Configuración (i18n)
-└── ...
+│   ├── components/
+│   │   ├── Avatar/           # Avatar con AnimatePresence
+│   │   │   ├── Avatar.tsx
+│   │   │   └── AvatarContainer.tsx
+│   │   ├── Carousel/         # Carousels de contexto y tecnologías
+│   │   │   ├── ContextCarousel.tsx
+│   │   │   └── TechnologyCarousel.tsx
+│   │   ├── ContactForm/      # Información de contacto
+│   │   │   └── ContactInfo.tsx
+│   │   ├── Layout/           # Estructura base
+│   │   │   ├── MainLayout.tsx
+│   │   │   └── Header.tsx
+│   │   ├── Navigation/       # Controles de navegación
+│   │   │   ├── TemporalNavigation.tsx  # Timeline horizontal
+│   │   │   ├── LanguageToggle.tsx
+│   │   │   └── ThemeToggle.tsx
+│   │   ├── Panels/           # Paneles de contenido
+│   │   │   ├── InfoPanel.tsx
+│   │   │   ├── WorkPanel.tsx
+│   │   │   ├── ProjectsPanel.tsx
+│   │   │   └── LeisurePanel.tsx
+│   │   └── UI/               # Componentes reutilizables
+│   │       ├── Button.tsx
+│   │       └── Card.tsx
+│   ├── contexts/             # Estado global
+│   │   ├── ThemeContext.tsx
+│   │   └── PortfolioContext.tsx
+│   ├── data/                 # Datos del portfolio
+│   │   ├── portfolio.data.ts
+│   │   ├── avatars.data.ts
+│   │   └── technologies.data.ts
+│   ├── hooks/                # Custom hooks
+│   │   ├── usePortfolio.ts
+│   │   └── useTheme.ts
+│   ├── locales/              # Traducciones
+│   │   ├── en/translation.json
+│   │   └── es/translation.json
+│   ├── types/                # Tipos TypeScript
+│   │   ├── portfolio.types.ts
+│   │   └── theme.types.ts
+│   ├── utils/                # Utilidades
+│   │   ├── animations.ts
+│   │   └── constants.ts
+│   ├── config/               # Configuración
+│   │   └── i18n.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── tailwind.config.js
+├── vite.config.ts
+├── tsconfig.json
+└── package.json
 ```
 
-## Instalación
+---
+
+## 🚀 Instalación y Uso
+
+### Prerequisitos
+
+- Node.js 18+
+- npm o yarn
+
+### Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/lascenify/portfolio.git
+cd portfolio
+
 # Instalar dependencias
 npm install
-
-# Copiar archivo de variables de entorno
-cp .env.example .env
-
-# Configurar EmailJS (opcional)
-# Editar .env con tus credenciales de EmailJS
 ```
 
-## Variables de Entorno
-
-Crea un archivo `.env` en la raíz del proyecto:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-Para obtener las credenciales:
-1. Regístrate en [EmailJS](https://www.emailjs.com/)
-2. Crea un servicio de email
-3. Crea una plantilla de email
-4. Copia las credenciales al archivo `.env`
-
-## Comandos
+### Comandos de Desarrollo
 
 ```bash
-# Desarrollo
+# Servidor de desarrollo (http://localhost:5173)
 npm run dev
 
 # Build para producción
 npm run build
 
-# Preview del build
+# Preview del build local
 npm run preview
 
 # Linting
 npm run lint
-```
-
-## Configuración del Contenido
-
-### Actualizar Datos del Portfolio
-
-Edita el archivo `src/data/portfolio.data.ts` para personalizar:
-
-- **Experiencias laborales** (past, present, future)
-- **Proyectos** (past, present, future)
-- **Hobbies e intereses** (past, present, future)
-
-### Añadir Avatares
-
-Coloca 9 imágenes PNG en `public/avatars/` con los nombres:
-
-- `work-past.png`, `work-present.png`, `work-future.png`
-- `projects-past.png`, `projects-present.png`, `projects-future.png`
-- `leisure-past.png`, `leisure-present.png`, `leisure-future.png`
-
-### Añadir Logos de Tecnologías
-
-Coloca los logos en `public/technologies/` y actualiza `src/data/technologies.data.ts`.
-
-## Navegación
-
-### Temporal
-- **Flechas arriba/abajo**: Navega entre pasado, presente y futuro
-- **Estado actual**: Se muestra en el indicador central
-
-### Contextos
-- **💼 Trabajo**: Experiencia laboral
-- **🚀 Proyectos**: Proyectos personales y profesionales
-- **🎨 Ocio**: Hobbies e intereses
-
-### Tema e Idioma
-- **Botón sol/luna**: Alterna entre modo claro y oscuro
-- **Botón ES/EN**: Cambia entre español e inglés
-
-## Personalización
-
-### Colores
-
-Edita `tailwind.config.js` para cambiar la paleta de colores:
-
-```javascript
-colors: {
-  primary: {
-    light: '#3B82F6',  // Azul claro
-    dark: '#60A5FA',   // Azul oscuro
-  },
-  // ... otros colores
-}
-```
-
-### Traducciones
-
-Añade o edita traducciones en:
-- `src/locales/es/translation.json`
-- `src/locales/en/translation.json`
-
-### Animaciones
-
-Personaliza las animaciones en `src/utils/animations.ts`.
-
-## Deploy
-
-### Vercel
-
-```bash
-# Instalar Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-### Netlify
-
-```bash
-# Build
-npm run build
-
-# Deploy la carpeta dist/
-```
-
-### GitHub Pages
-
-```bash
-# Instalar gh-pages
-npm install -D gh-pages
-
-# Añadir script en package.json
-"deploy": "npm run build && gh-pages -d dist"
 
 # Deploy
 npm run deploy
 ```
 
-## Contribuir
+---
 
-Las contribuciones son bienvenidas. Por favor:
+## 🎯 Cómo Funciona
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+### Navegación Temporal
 
-## Licencia
+El proyecto implementa un **timeline horizontal** con 3 estados:
 
-Este proyecto está bajo la Licencia MIT.
+- **⏳ Pasado**: Experiencias y proyectos anteriores
+- **⚡ Presente**: Situación actual con 3 contextos (trabajo/proyectos/ocio)
+- **⭐ Futuro**: Objetivos y aspiraciones
 
-## Contacto
+El usuario navega haciendo click en los nodos del timeline. Una barra animada muestra el progreso.
 
-Portfolio Interactivo - Proyecto de demostración
+### Sistema de Contextos (Solo en Presente)
+
+Cuando el timeline está en "presente", aparece un carousel con 3 opciones:
+
+1. **💼 Trabajo**: Experiencia laboral actual
+2. **🚀 Proyectos**: Proyectos personales actuales
+3. **🎨 Ocio**: Hobbies e intereses actuales
+
+Al cambiar a pasado/futuro, el contexto se resetea automáticamente a "trabajo".
+
+### Layout de Dos Columnas
+
+**Desktop (≥1024px):**
+- **Columna Izquierda** (sticky): Timeline, selector de contexto (si presente), avatar
+- **Columna Derecha** (scroll): Panel de información dinámico
+
+**Mobile (<1024px):**
+- Layout apilado verticalmente
+
+### Avatares Dinámicos
+
+5 avatares SVG que cambian según el estado:
+- `past.png`: Avatar del pasado
+- `present-work.png`, `present-projects.png`, `present-leisure.png`: Avatares del presente
+- `future.png`: Avatar del futuro
 
 ---
 
-Construido con ❤️ usando React, TypeScript y Tailwind CSS
+## 🎭 Animaciones
+
+El proyecto usa **Framer Motion** para animaciones fluidas:
+
+### Variantes Principales
+
+**Avatar Transitions** (`src/utils/animations.ts`):
+```typescript
+export const avatarVariants: Variants = {
+  initial: { opacity: 0, scale: 0.8, rotate: -10 },
+  animate: { opacity: 1, scale: 1, rotate: 0 },
+  exit: { opacity: 0, scale: 0.8, rotate: 10 }
+};
+```
+
+**Panel Transitions**:
+```typescript
+export const panelVariants: Variants = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: -100 }
+};
+```
+
+**Cards Staggered**:
+```typescript
+export const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1 }
+  })
+};
+```
+
+---
+
+## 🏗️ Arquitectura
+
+### Context API
+
+**ThemeContext**: Gestiona dark/light mode con persistencia en localStorage.
+
+**PortfolioContext**: Gestiona el estado global del portfolio:
+```typescript
+interface PortfolioState {
+  timeline: 'past' | 'present' | 'future';
+  context: 'work' | 'projects' | 'leisure';
+  language: 'es' | 'en';
+}
+```
+
+Incluye lógica de auto-reset: al salir de "presente", el contexto vuelve a "work".
+
+### Custom Hooks
+
+- `usePortfolio()`: Acceso al estado del portfolio
+- `useTheme()`: Acceso al tema actual
+
+### Type Safety
+
+TypeScript estricto con tipos definidos en `src/types/`:
+- `Timeline`, `Context`, `Experience`, `Project`, `Hobby`
+- Interfaces para componentes y datos
+
+---
+
+## 📊 Performance
+
+### Build Optimizado
+
+- **Bundle size**: ~400KB (~127KB gzipped)
+- **Code splitting**: Automático con Vite
+- **Lazy loading**: Imágenes de tecnologías
+- **CSS optimization**: Tailwind PurgeCSS
+
+### Lighthouse Score (Target)
+
+- ✅ Performance: >90
+- ✅ Accessibility: >90
+- ✅ Best Practices: >90
+- ✅ SEO: >90
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+
+---
+
+## 📧 Contacto
+
+**Ascen Salmerón**
+
+- 📧 Email: [ascensalmanez@gmail.com](mailto:ascensalmanez@gmail.com)
+- 💻 GitHub: [github.com/lascenify](https://github.com/lascenify)
+- 💼 LinkedIn: [linkedin.com/in/ascen-salmeron](https://www.linkedin.com/in/ascen-salmeron/)
+
+---
+
+## 🙏 Agradecimientos
+
+- [DevIcon](https://devicon.dev/) - Iconos de tecnologías
+- [Framer Motion](https://www.framer.com/motion/) - Librería de animaciones
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
+- [Vite](https://vitejs.dev/) - Build tool ultrarrápido
+
+---
+
