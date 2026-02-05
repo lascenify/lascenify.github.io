@@ -14,7 +14,7 @@
     "title": "Conectemos",
     "subtitle": "Siempre abierto a nuevas oportunidades y colaboraciones interesantes",
     "email": "Email",
-    "availability": "Disponible para proyectos freelance y oportunidades laborales",
+    "availability": "Disponible para proyectos y oportunidades laborales",
     "status": "Disponible",
     "downloadCV": "Descargar CV"
   },
@@ -35,10 +35,6 @@
     "title": "Intereses y Hobbies"
   },
   "technologies": {
-    "title": "Tecnologías",
-    "hover": "Pasa el cursor para pausar"
-  },
-  "footer": {
-    "rights": "Todos los derechos reservados"
+    "title": "Tecnologías"
   }
 }

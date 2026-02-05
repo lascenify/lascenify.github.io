@@ -6,9 +6,19 @@ export interface Technology {
 
 export const technologies: Technology[] = [
   {
+    name: 'Git',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    color: '#F05032'
+  },
+  {
     name: 'React',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     color: '#61DAFB'
+  },
+  {
+    name: 'Angular',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+    color: '#DD0031'
   },
   {
     name: 'TypeScript',
@@ -36,29 +46,19 @@ export const technologies: Technology[] = [
     color: '#06B6D4'
   },
   {
+    name: 'Webpack',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
+    color: '#1C78C0'
+  },
+  {
     name: 'Vite',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
     color: '#646CFF'
   },
   {
-    name: 'Git',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-    color: '#F05032'
-  },
-  {
-    name: 'GraphQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
-    color: '#E10098'
-  },
-  {
-    name: 'PostgreSQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-    color: '#4169E1'
-  },
-  {
-    name: 'MongoDB',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-    color: '#47A248'
+    name: 'MySQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    color: '#4479A1'
   },
   {
     name: 'Docker',
@@ -66,13 +66,38 @@ export const technologies: Technology[] = [
     color: '#2496ED'
   },
   {
-    name: 'AWS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
-    color: '#FF9900'
+    name: 'Svelte',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
+    color: '#FF3E00'
   },
   {
-    name: 'Python',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    color: '#3776AB'
+    name: 'Jest',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
+    color: '#C21325'
   },
+  {
+    name: 'React Testing Library',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/testinglibrary/testinglibrary-original.svg',
+    color: '#E33332'
+  },
+  {
+    name: 'PHP',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+    color: '#777BB4'
+  },
+  {
+    name: 'Prisma',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
+    color: '#2D3748'
+  },
+  { 
+    name: 'Supabase',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
+    color: '#3ECF8E'
+  },
+  {
+    name: 'Ruby on Rails',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original.svg',
+    color: '#CC0000'
+  }
 ];

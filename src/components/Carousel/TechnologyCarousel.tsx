@@ -79,11 +79,6 @@ export const TechnologyCarousel: React.FC = () => {
           ))}
         </motion.div>
       </div>
-
-      {/* Helper text */}
-      <p className="text-center mt-6 text-xs text-text-secondary-light dark:text-text-secondary-dark opacity-70">
-        {t('technologies.hover') || 'Pasa el cursor para ver detalles'}
-      </p>
     </div>
   );
 };

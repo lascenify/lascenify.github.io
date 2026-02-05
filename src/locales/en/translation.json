@@ -14,7 +14,7 @@
     "title": "Let's Connect",
     "subtitle": "Always open to new opportunities and interesting collaborations",
     "email": "Email",
-    "availability": "Available for freelance projects and job opportunities",
+    "availability": "Available for projects and job opportunities",
     "status": "Available",
     "downloadCV": "Download CV"
   },
@@ -35,10 +35,6 @@
     "title": "Interests & Hobbies"
   },
   "technologies": {
-    "title": "Technologies",
-    "hover": "Hover to pause"
-  },
-  "footer": {
-    "rights": "All rights reserved"
+    "title": "Technologies"
   }
 }
