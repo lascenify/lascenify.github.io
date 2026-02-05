@@ -12,6 +12,9 @@ interface AvatarProps {
 export const Avatar: React.FC<AvatarProps> = ({ timeline, context }) => {
   const avatarUrl = getAvatarUrl(timeline, context);
 
+  // El avatar inicial se carga con prioridad (está preloaded en index.html)
+  const isPriority = timeline === 'present' && context === 'work';
+
   return (
     <div className="flex items-center justify-center">
       <AnimatePresence mode="wait">
@@ -28,6 +31,8 @@ export const Avatar: React.FC<AvatarProps> = ({ timeline, context }) => {
               src={avatarUrl}
               alt={`Avatar - ${context} ${timeline}`}
               className="w-full h-full object-cover"
+              loading={isPriority ? 'eager' : 'lazy'}
+              decoding={isPriority ? 'sync' : 'async'}
               onError={(e) => {
                 // Fallback to placeholder if image doesn't exist
                 const target = e.target as HTMLImageElement;
