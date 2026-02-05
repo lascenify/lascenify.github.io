@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/UI/Card';
-import { portfolioData } from '@/data/portfolio.data';
+import { getPortfolioData } from '@/data/portfolio.i18n';
 import type { Timeline } from '@/types/portfolio.types';
 
 interface ProjectsPanelProps {
@@ -9,7 +9,8 @@ interface ProjectsPanelProps {
 }
 
 export const ProjectsPanel: React.FC<ProjectsPanelProps> = ({ timeline }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const portfolioData = getPortfolioData(i18n.language as 'es' | 'en');
   const projects = portfolioData[timeline].projects;
 
   // Si no hay datos de projects para este timeline, no renderizar nada

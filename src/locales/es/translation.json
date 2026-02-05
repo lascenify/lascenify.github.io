@@ -7,12 +7,11 @@
   "contexts": {
     "work": "Trabajo",
     "projects": "Proyectos",
-    "leisure": "Ocio",
-    "selectContext": "Selecciona un contexto"
+    "leisure": "Ocio"
   },
   "contact": {
     "title": "Conectemos",
-    "subtitle": "Siempre abierto a nuevas oportunidades y colaboraciones interesantes",
+    "subtitle": "Soy Ascen, una desarrolladora de software especializada en frontend (React y Angular) con experiencia en backend (Node.js y PHP).",
     "email": "Email",
     "availability": "Disponible para proyectos y oportunidades laborales",
     "status": "Disponible",
@@ -35,6 +34,15 @@
     "title": "Intereses y Hobbies"
   },
   "technologies": {
-    "title": "Tecnologías"
+    "title": "Tecnologías",
+    "searchPlaceholder": "Buscar tecnología...",
+    "notFound": "Ups! no he trabajado con esta tecnología, pero aprendo rápido 😉"
+  },
+  "accessibility": {
+    "toggleLanguage": "Cambiar idioma",
+    "toggleTheme": "Cambiar tema"
+  },
+  "avatar": {
+    "fallbackAlt": "Avatar"
   }
 }

@@ -5,7 +5,7 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 import type { Language } from '@/types/portfolio.types';
 
 export const LanguageToggle: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { language, setLanguage } = usePortfolio();
 
   const toggleLanguage = () => {
@@ -20,7 +20,7 @@ export const LanguageToggle: React.FC = () => {
       className="px-4 py-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors font-semibold"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label="Toggle language"
+      aria-label={t('accessibility.toggleLanguage')}
     >
       {language.toUpperCase()}
     </motion.button>

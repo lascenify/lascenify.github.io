@@ -71,20 +71,20 @@ export const ContactInfo: React.FC = () => {
         </div>
 
         {/* Contact Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 place-items-center">
           {contactLinks.map((link, index) => (
             <motion.a
               key={link.label}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative"
+              className="group relative w-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
             >
-              <div className="relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 p-6 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent group-hover:border-primary-light dark:group-hover:border-primary-dark">
+              <div className="text-center relative overflow-hidden rounded-xl h-48 md:h-48 bg-white dark:bg-gray-800 p-6 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent group-hover:border-primary-light dark:group-hover:border-primary-dark">
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
 
@@ -133,25 +133,6 @@ export const ContactInfo: React.FC = () => {
               {t('contact.status')}
             </span>
           </div>
-        </motion.div>
-
-        {/* Download CV Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-center mt-8"
-        >
-          <motion.button
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            {t('contact.downloadCV')}
-          </motion.button>
         </motion.div>
       </div>
     </motion.div>

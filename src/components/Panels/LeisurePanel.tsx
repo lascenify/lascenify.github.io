@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/UI/Card';
-import { portfolioData } from '@/data/portfolio.data';
+import { getPortfolioData } from '@/data/portfolio.i18n';
 import type { Timeline } from '@/types/portfolio.types';
 
 interface LeisurePanelProps {
@@ -9,7 +9,8 @@ interface LeisurePanelProps {
 }
 
 export const LeisurePanel: React.FC<LeisurePanelProps> = ({ timeline }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const portfolioData = getPortfolioData(i18n.language as 'es' | 'en');
   const hobbies = portfolioData[timeline].leisure;
 
   // Si no hay datos de leisure para este timeline, no renderizar nada

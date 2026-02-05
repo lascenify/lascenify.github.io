@@ -111,24 +111,10 @@ export const TemporalNavigation: React.FC = () => {
                     {t(`nav.${time}`)}
                   </p>
                 </motion.div>
-
-                {/* Hover Tooltip */}
-                <div className="absolute -bottom-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded-md whitespace-nowrap">
-                    {t(`nav.${time}`)}
-                  </div>
-                </div>
               </motion.button>
             );
           })}
         </div>
-      </div>
-
-      {/* Mobile Helper Text */}
-      <div className="mt-6 text-center md:hidden">
-        <p className="text-xs text-text-secondary-light dark:text-text-secondary-dark">
-          {t(`nav.${timeline}`)}
-        </p>
       </div>
     </div>
   );

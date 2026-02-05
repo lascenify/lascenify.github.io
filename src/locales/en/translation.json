@@ -7,12 +7,11 @@
   "contexts": {
     "work": "Work",
     "projects": "Projects",
-    "leisure": "Leisure",
-    "selectContext": "Select a context"
+    "leisure": "Leisure"
   },
   "contact": {
     "title": "Let's Connect",
-    "subtitle": "Always open to new opportunities and interesting collaborations",
+    "subtitle": "I'm Ascen, a software developer specialized in frontend (React and Angular) with experience in backend (Node.js and PHP).",
     "email": "Email",
     "availability": "Available for projects and job opportunities",
     "status": "Available",
@@ -35,6 +34,15 @@
     "title": "Interests & Hobbies"
   },
   "technologies": {
-    "title": "Technologies"
+    "title": "Technologies",
+    "searchPlaceholder": "Search technology...",
+    "notFound": "Oops! I haven't worked with this technology, but I learn fast 😉"
+  },
+  "accessibility": {
+    "toggleLanguage": "Toggle language",
+    "toggleTheme": "Toggle theme"
+  },
+  "avatar": {
+    "fallbackAlt": "Avatar"
   }
 }

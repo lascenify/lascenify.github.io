@@ -10,13 +10,6 @@ export const ContextCarousel: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Title */}
-      <div className="text-center mb-4">
-        <p className="text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider">
-          {t('contexts.selectContext')}
-        </p>
-      </div>
-
       {/* Context Buttons */}
       <div className="flex items-center justify-center gap-2 md:gap-3">
         {CONTEXTS.map((ctx, index) => {
@@ -26,7 +19,7 @@ export const ContextCarousel: React.FC = () => {
             <motion.button
               key={ctx}
               onClick={() => setContext(ctx)}
-              className={`relative flex flex-col items-center justify-center p-3 md:p-4 rounded-xl transition-all border-2 ${
+              className={`relative flex flex-col items-center justify-center h-24 w-24 p-3 md:p-4 rounded-xl transition-all border-2 ${
                 isActive
                   ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl border-transparent'
                   : 'bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-600 hover:border-primary-light dark:hover:border-primary-dark'

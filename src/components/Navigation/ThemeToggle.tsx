@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/hooks/useTheme';
 
 export const ThemeToggle: React.FC = () => {
+  const { t } = useTranslation();
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -11,7 +13,7 @@ export const ThemeToggle: React.FC = () => {
       className="p-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label="Toggle theme"
+      aria-label={t('accessibility.toggleTheme')}
     >
       {theme === 'light' ? (
         <svg

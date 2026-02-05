@@ -15,7 +15,7 @@ export const AvatarContainer: React.FC = () => {
 
       {/* Context Carousel - Only visible in present */}
       <AnimatePresence mode="wait">
-        {timeline === 'present' && (
+        {timeline !== 'future' && (
           <motion.div
             key="context-carousel"
             initial={{ opacity: 0, y: -20, scale: 0.9 }}

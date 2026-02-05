@@ -1,6 +1,6 @@
 import type { Timeline, TimelineData } from '@/types/portfolio.types';
 
-export const portfolioData: Record<Timeline, TimelineData> = {
+export const portfolioDataES: Record<Timeline, TimelineData> = {
   past: {
     work: [
       {
@@ -29,7 +29,31 @@ export const portfolioData: Record<Timeline, TimelineData> = {
           'Foco en la eficiencia y en las mejores prácticas de desarrollo frontend',
         ],
       },
-    ]
+    ],
+    projects: [
+      {
+        id: 'project-past-1',
+        name: 'Memory Game',
+        description: 'Juego de memoria para Android desarrollado con Kotlin y Java',
+        technologies: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
+        link: 'https://github.com/lascenify/memory-game',
+      },
+      {
+        id: 'project-past-2',
+        name: 'Weather forecast app',
+        description: 'Aplicación de pronóstico del tiempo para Android utilizando la API de OpenWeatherMap',
+        technologies: ['Kotlin', 'Android Studio', 'Retrofit', 'MVVM'],
+        link: 'https://github.com/lascenify/sunshine',
+      }
+    ],
+    leisure: [
+      {
+        id: 'leisure-past-1',
+        name: 'Ultimate Frisbee',
+        description: 'Juego de frisbee en equipo, disfruto de la competencia y el deporte en equipo',
+        icon: '🥏',
+      },
+    ],
   },
   present: {
     work: [
@@ -42,7 +66,7 @@ export const portfolioData: Record<Timeline, TimelineData> = {
         technologies: ['React', 'TypeScript', 'Next.js', 'Jest', 'React Testing Library', 'HTML', 'CSS', 'GitHub Actions', 'Docker', 'Lerna', 'Webpack', 'Vite', 'Node.js', 'PHP'],
         highlights: [
           'Migración de aplicación monolítica a microservicios',
-          'Implementación de CI/CD con GitHub Actions',
+          'Implementación de aplicaciones nuevas desde cero con Next.js y React',
           'Mentoría de otros 3 desarrolladores frontend',
           'Optimización y migración de tecnologías para mejorar el rendimiento y la experiencia de usuario',
           'Evolutivos sobre funcionalidades existentes y desarrollo de nuevas características para la aplicación principal',
@@ -54,17 +78,17 @@ export const portfolioData: Record<Timeline, TimelineData> = {
         id: 'project-present-1',
         name: 'Plant-wise',
         description: 'Plataforma online para intercambio de esquejes y plantas entre vecinos',
-        technologies: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Vercel'],
+        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'shadcn/ui', 'Tailwind CSS', 'Vercel', 'shadcn/ui'],
       },
       {
         id: 'project-present-2',
-        name: 'Asistente OpenClaw',
+        name: 'OpenClaw Assistant',
         description: 'Sistema multi-agent de IA con 6 roles especializados (coordinator, dev, architect, researcher, admin, ops) que automatiza el ciclo completo de tareas: análisis, planificación, ejecución y notificación, con dashboard web responsive e integración con Telegram.',
         technologies: ['OpenClaw'],
       },
       {
         id: 'project-present-3',
-        name: 'Sistema de domótica en casa',
+        name: 'Home automation system',
         description: 'Sistema de automatización doméstica con control centralizado y personalización avanzada',
         technologies: ['Raspberry Pi', 'Home Assistant'],
       },
@@ -72,9 +96,9 @@ export const portfolioData: Record<Timeline, TimelineData> = {
     leisure: [
       {
         id: 'leisure-present-1',
-        name: 'Desarrollo de proyectos de carpintería',
+        name: 'Carpintería',
         description: 'Una de mis pasiones es la carpintería, donde diseño y construyo muebles personalizados para mi hogar',
-        icon: '💻',
+        icon: '🪚',
       },
       {
         id: 'leisure-present-2',
@@ -90,10 +114,22 @@ export const portfolioData: Record<Timeline, TimelineData> = {
       },
       {
         id: 'leisure-present-4',
-        name: 'Fitness',
+        name: 'Spinning',
         description: 'Mente sana en cuerpo sano',
-        icon: '💪',
+        icon: '🚴‍♂️',
       },
+      {
+        id: 'leisure-present-5',
+        name: 'Arte',
+        description: 'Me encanta ir a museos y galerías de arte para inspirarme y desconectar',
+        icon: '🎨',
+      },
+      {
+        id: 'leisure-present-6',
+        name: 'Viajar',
+        description: 'Me apasiona descubrir nuevos lugares, culturas y gastronomía viajando por el mundo',
+        icon: '✈️',
+      }
     ],
   },
   future: {
