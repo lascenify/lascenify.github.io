@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "past": "Past",
+    "present": "Present",
+    "future": "Future"
+  },
+  "contexts": {
+    "work": "Work",
+    "projects": "Projects",
+    "leisure": "Leisure",
+    "selectContext": "Select a context"
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Always open to new opportunities and interesting collaborations",
+    "email": "Email",
+    "availability": "Available for freelance projects and job opportunities",
+    "status": "Available",
+    "downloadCV": "Download CV"
+  },
+  "work": {
+    "title": "Work Experience",
+    "company": "Company",
+    "period": "Period",
+    "technologies": "Technologies",
+    "highlights": "Highlights"
+  },
+  "projects": {
+    "title": "Projects",
+    "technologies": "Technologies",
+    "viewProject": "View project",
+    "viewCode": "View code"
+  },
+  "leisure": {
+    "title": "Interests & Hobbies"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "hover": "Hover to pause"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

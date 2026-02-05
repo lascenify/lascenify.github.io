@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "past": "Pasado",
+    "present": "Presente",
+    "future": "Futuro"
+  },
+  "contexts": {
+    "work": "Trabajo",
+    "projects": "Proyectos",
+    "leisure": "Ocio",
+    "selectContext": "Selecciona un contexto"
+  },
+  "contact": {
+    "title": "Conectemos",
+    "subtitle": "Siempre abierto a nuevas oportunidades y colaboraciones interesantes",
+    "email": "Email",
+    "availability": "Disponible para proyectos freelance y oportunidades laborales",
+    "status": "Disponible",
+    "downloadCV": "Descargar CV"
+  },
+  "work": {
+    "title": "Experiencia Laboral",
+    "company": "Empresa",
+    "period": "Período",
+    "technologies": "Tecnologías",
+    "highlights": "Destacados"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "technologies": "Tecnologías",
+    "viewProject": "Ver proyecto",
+    "viewCode": "Ver código"
+  },
+  "leisure": {
+    "title": "Intereses y Hobbies"
+  },
+  "technologies": {
+    "title": "Tecnologías",
+    "hover": "Pasa el cursor para pausar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}

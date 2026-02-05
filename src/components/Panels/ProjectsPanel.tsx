@@ -1,0 +1,80 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Card } from '@/components/UI/Card';
+import { portfolioData } from '@/data/portfolio.data';
+import type { Timeline } from '@/types/portfolio.types';
+
+interface ProjectsPanelProps {
+  timeline: Timeline;
+}
+
+export const ProjectsPanel: React.FC<ProjectsPanelProps> = ({ timeline }) => {
+  const { t } = useTranslation();
+  const projects = portfolioData[timeline].projects;
+
+  // Si no hay datos de projects para este timeline, no renderizar nada
+  if (!projects || projects.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-3xl font-bold text-center mb-8">
+        {t('projects.title')}
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <Card key={project.id} index={index}>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-primary-light dark:text-primary-dark">
+                {project.name}
+              </h3>
+
+              <p className="text-text-primary-light dark:text-text-primary-dark">
+                {project.description}
+              </p>
+
+              <div>
+                <h4 className="font-semibold mb-2 text-sm">{t('projects.technologies')}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex gap-3 pt-2">
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-primary-light dark:bg-primary-dark text-white rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    {t('projects.viewProject')}
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg text-sm font-semibold hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 transition-colors"
+                  >
+                    {t('projects.viewCode')}
+                  </a>
+                )}
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+};
