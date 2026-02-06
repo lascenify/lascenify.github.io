@@ -37,6 +37,13 @@ export const portfolioDataES: Record<Timeline, TimelineData> = {
         description: 'Juego de memoria para Android desarrollado con Kotlin y Java',
         technologies: ['Kotlin', 'Android Studio', 'Jetpack Compose'],
         link: 'https://github.com/lascenify/memory-game',
+        gallery: [
+          '/projects/memory-game-1.jpeg',
+          '/projects/memory-game-2.jpeg',
+          '/projects/memory-game-3.jpeg',
+          '/projects/memory-game-4.jpeg',
+          '/projects/memory-game-5.jpeg',
+        ],
       },
       {
         id: 'project-past-2',
@@ -76,15 +83,24 @@ export const portfolioDataES: Record<Timeline, TimelineData> = {
     projects: [
       {
         id: 'project-present-1',
-        name: 'Plant-wise',
+        name: 'Brot Veinal',
         description: 'Plataforma online para intercambio de esquejes y plantas entre vecinos',
         technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'shadcn/ui', 'Tailwind CSS', 'Vercel', 'shadcn/ui'],
+        gallery: [
+          '/projects/brot-veinal-1.jpg',
+          '/projects/brot-veinal-2.jpg',
+          '/projects/brot-veinal-3.jpg',
+        ],
       },
       {
         id: 'project-present-2',
         name: 'OpenClaw Assistant',
         description: 'Sistema multi-agent de IA con 6 roles especializados (coordinator, dev, architect, researcher, admin, ops) que automatiza el ciclo completo de tareas: análisis, planificación, ejecución y notificación, con dashboard web responsive e integración con Telegram.',
         technologies: ['OpenClaw'],
+        gallery: [
+          '/projects/openclaw-1.jpg',
+          '/projects/openclaw-2.jpg',
+        ],
       },
       {
         id: 'project-present-3',

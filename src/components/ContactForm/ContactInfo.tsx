@@ -53,6 +53,7 @@ export const ContactInfo: React.FC = () => {
 
   return (
     <motion.div
+      id="contact-section"
       variants={slideUpVariants}
       initial="hidden"
       whileInView="visible"
@@ -68,6 +69,12 @@ export const ContactInfo: React.FC = () => {
           <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
+          <ul className="text-left text-md text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto mt-4 whitespace-pre-wrap">
+            <li>{t('contact.detail-1')}</li>
+            <li>{t('contact.detail-2')}</li>
+            <li>{t('contact.detail-3')}</li>
+            <li>{t('contact.detail-4')}</li>
+          </ul>
         </div>
 
         {/* Contact Links */}

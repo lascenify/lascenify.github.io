@@ -19,6 +19,7 @@ export interface Project {
   technologies: string[];
   link?: string;
   github?: string;
+  gallery?: string[];
 }
 
 export interface Hobby {

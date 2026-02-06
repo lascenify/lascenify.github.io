@@ -11,11 +11,17 @@
   },
   "contact": {
     "title": "Let's Connect",
-    "subtitle": "I'm Ascen, a software developer specialized in frontend (React and Angular) with experience in backend (Node.js and PHP).",
+     "subtitle": "I'm Ascen, a frontend developer passionate about creating intuitive and efficient user experiences.",
+    "detail-1": "🎯 I specialize in React and TypeScript, with +5 years building scalable applications.",
+    "detail-2": "🚀 My superpower: transforming complex requirements into simple and elegant interfaces.",
+    "detail-3": "🌱 Currently exploring: generative AI, multi-agent systems, and intelligent automation.",
+    "detail-4": "📍 Based in Valencia, available for remote work.",
     "email": "Email",
     "availability": "Available for projects and job opportunities",
     "status": "Available",
-    "downloadCV": "Download CV"
+    "downloadCV": "Download CV",
+    "cta": "Contact Me",
+    "ctaShort": "Contact"
   },
   "work": {
     "title": "Work Experience",
@@ -28,7 +34,10 @@
     "title": "Projects",
     "technologies": "Technologies",
     "viewProject": "View project",
-    "viewCode": "View code"
+    "viewCode": "View code",
+    "viewGallery": "View gallery",
+    "galleryTitle": "Image Gallery",
+    "closeGallery": "Close gallery"
   },
   "leisure": {
     "title": "Interests & Hobbies"

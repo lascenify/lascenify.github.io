@@ -11,11 +11,17 @@
   },
   "contact": {
     "title": "Conectemos",
-    "subtitle": "Soy Ascen, una desarrolladora de software especializada en frontend (React y Angular) con experiencia en backend (Node.js y PHP).",
+    "subtitle": "Soy Ascen, desarrolladora frontend apasionada por crear experiencias de usuario intuitivas y eficientes.",
+    "detail-1": "🎯 Me especializo en React y TypeScript, con +5 años construyendo aplicaciones escalables.",
+    "detail-2": "🚀 Mi superpoder: transformar requisitos complejos en interfaces simples y elegantes.",
+    "detail-3": "🌱 Actualmente explorando: IA generativa, sistemas multi-agente, y automatización inteligente.",
+    "detail-4": "📍 Basada en Valencia, disponible para remoto.",
     "email": "Email",
     "availability": "Disponible para proyectos y oportunidades laborales",
     "status": "Disponible",
-    "downloadCV": "Descargar CV"
+    "downloadCV": "Descargar CV",
+    "cta": "Contáctame",
+    "ctaShort": "Contacto"
   },
   "work": {
     "title": "Experiencia Laboral",
@@ -28,7 +34,10 @@
     "title": "Proyectos",
     "technologies": "Tecnologías",
     "viewProject": "Ver proyecto",
-    "viewCode": "Ver código"
+    "viewCode": "Ver código",
+    "viewGallery": "Ver galería",
+    "galleryTitle": "Galería de imágenes",
+    "closeGallery": "Cerrar galería"
   },
   "leisure": {
     "title": "Intereses y Hobbies"
