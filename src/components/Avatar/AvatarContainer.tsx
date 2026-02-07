@@ -6,7 +6,8 @@ import { TemporalNavigation } from '@/components/Navigation/TemporalNavigation';
 import { ContextCarousel } from '@/components/Carousel/ContextCarousel';
 
 export const AvatarContainer: React.FC = () => {
-  const { timeline, context } = usePortfolio();
+  const { timeline, contexts } = usePortfolio();
+  const context = contexts[timeline];
 
   return (
     <div className="flex flex-col items-center gap-8 w-full max-w-lg sticky top-24">
@@ -24,7 +25,7 @@ export const AvatarContainer: React.FC = () => {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className="w-full flex justify-center"
           >
-            <ContextCarousel />
+            <ContextCarousel timeline={timeline} />
           </motion.div>
         )}
       </AnimatePresence>

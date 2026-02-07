@@ -3,10 +3,20 @@ import { motion } from 'framer-motion';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useTranslation } from 'react-i18next';
 import { CONTEXTS, CONTEXT_ICONS } from '@/utils/constants';
+import type { Timeline, Context } from '@/types/portfolio.types';
 
-export const ContextCarousel: React.FC = () => {
-  const { context, setContext } = usePortfolio();
+interface ContextCarouselProps {
+  timeline: Timeline;
+}
+
+export const ContextCarousel: React.FC<ContextCarouselProps> = ({ timeline }) => {
+  const { contexts, setContext } = usePortfolio();
   const { t } = useTranslation();
+  const context = contexts[timeline];
+
+  const handleContextChange = (newContext: Context) => {
+    setContext(timeline, newContext);
+  };
 
   return (
     <div className="relative">
@@ -18,7 +28,7 @@ export const ContextCarousel: React.FC = () => {
           return (
             <motion.button
               key={ctx}
-              onClick={() => setContext(ctx)}
+              onClick={() => handleContextChange(ctx)}
               className={`relative flex flex-col items-center justify-center w-fit min-w-24 h-24 p-3 md:p-4 rounded-xl transition-all border-2 ${
                 isActive
                   ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl border-transparent'

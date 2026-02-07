@@ -4,6 +4,11 @@
     "present": "Presente",
     "future": "Futuro"
   },
+  "timeline": {
+    "past": "Pasado",
+    "present": "Presente",
+    "future": "Futuro"
+  },
   "contexts": {
     "work": "Trabajo",
     "projects": "Proyectos",
@@ -13,7 +18,7 @@
     "title": "Conectemos",
     "subtitle": "Soy Ascen, desarrolladora frontend apasionada por crear experiencias de usuario intuitivas y eficientes.",
     "detail-1": "🎯 Me especializo en React y TypeScript, con +5 años construyendo aplicaciones escalables.",
-    "detail-2": "🚀 Mi superpoder: transformar requisitos complejos en interfaces simples y elegantes.",
+    "detail-2": "🚀 Mi superpoder: transformar requisitos complejos en interfaces simples y elegantes con código escalable y testeado.",
     "detail-3": "🌱 Actualmente explorando: IA generativa, sistemas multi-agente, y automatización inteligente.",
     "detail-4": "📍 Basada en Valencia, disponible para remoto.",
     "email": "Email",
@@ -43,7 +48,7 @@
     "title": "Intereses y Hobbies"
   },
   "technologies": {
-    "title": "Tecnologías",
+    "title": "Stack Tecnológico",
     "searchPlaceholder": "Buscar tecnología...",
     "notFound": "Ups! no he trabajado con esta tecnología, pero aprendo rápido 😉"
   },

@@ -4,6 +4,11 @@
     "present": "Present",
     "future": "Future"
   },
+  "timeline": {
+    "past": "Past",
+    "present": "Present",
+    "future": "Future"
+  },
   "contexts": {
     "work": "Work",
     "projects": "Projects",
@@ -13,7 +18,7 @@
     "title": "Let's Connect",
      "subtitle": "I'm Ascen, a frontend developer passionate about creating intuitive and efficient user experiences.",
     "detail-1": "🎯 I specialize in React and TypeScript, with +5 years building scalable applications.",
-    "detail-2": "🚀 My superpower: transforming complex requirements into simple and elegant interfaces.",
+    "detail-2": "🚀 My superpower: transforming complex requirements into simple and elegant interfaces with scalable and tested code.",
     "detail-3": "🌱 Currently exploring: generative AI, multi-agent systems, and intelligent automation.",
     "detail-4": "📍 Based in Valencia, available for remote work.",
     "email": "Email",
@@ -43,7 +48,7 @@
     "title": "Interests & Hobbies"
   },
   "technologies": {
-    "title": "Technologies",
+    "title": "Tech Stack",
     "searchPlaceholder": "Search technology...",
     "notFound": "Oops! I haven't worked with this technology, but I learn fast 😉"
   },

@@ -5,13 +5,12 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 import type { Language } from '@/types/portfolio.types';
 
 export const LanguageToggle: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { language, setLanguage } = usePortfolio();
 
   const toggleLanguage = () => {
     const newLang: Language = language === 'es' ? 'en' : 'es';
     setLanguage(newLang);
-    i18n.changeLanguage(newLang);
   };
 
   return (

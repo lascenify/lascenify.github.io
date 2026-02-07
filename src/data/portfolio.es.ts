@@ -51,6 +51,17 @@ export const portfolioDataES: Record<Timeline, TimelineData> = {
         description: 'Aplicación de pronóstico del tiempo para Android utilizando la API de OpenWeatherMap',
         technologies: ['Kotlin', 'Android Studio', 'Retrofit', 'MVVM'],
         link: 'https://github.com/lascenify/sunshine',
+      },
+      {
+        id: 'project-past-3',
+        name: 'Generador de equipos de Ultimate Frisbee',
+        description: 'Aplicación web para generar equipos equilibrados de Ultimate Frisbee a partir de una lista de jugadores y sus habilidades',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+        gallery: [
+          '/projects/ultimate-1.jpeg',
+          '/projects/ultimate-2.jpeg',
+          '/projects/ultimate-3.jpeg',
+        ],
       }
     ],
     leisure: [

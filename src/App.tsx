@@ -1,33 +1,98 @@
+import { useEffect, useState, useRef } from 'react';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { PortfolioProvider } from '@/contexts/PortfolioContext';
 import { MainLayout } from '@/components/Layout/MainLayout';
-import { AvatarContainer } from '@/components/Avatar/AvatarContainer';
-import { InfoPanel } from '@/components/Panels/InfoPanel';
+import { ScrollTimeline } from '@/components/Navigation/ScrollTimeline';
+import { TimelineSection } from '@/components/Layout/TimelineSection';
 import { TechnologyCarousel } from '@/components/Carousel/TechnologyCarousel';
 import { ContactInfo } from '@/components/ContactForm/ContactInfo';
+import { usePortfolio } from '@/hooks/usePortfolio';
+import type { Timeline } from '@/types/portfolio.types';
+
+function AppContent() {
+  const { setTimeline } = usePortfolio();
+  const [activeTimeline, setActiveTimeline] = useState<Timeline>('present');
+  const sectionsRef = useRef<Map<Timeline, HTMLElement>>(new Map());
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -40% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionTimeline = entry.target.getAttribute('data-timeline') as Timeline;
+          if (sectionTimeline) {
+            setActiveTimeline(sectionTimeline);
+            setTimeline(sectionTimeline);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    sectionsRef.current.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, [setTimeline]);
+
+  const handleTimelineClick = (newTimeline: Timeline) => {
+    setActiveTimeline(newTimeline);
+    setTimeline(newTimeline);
+  };
+
+  const registerSection = (timeline: Timeline, element: HTMLElement | null) => {
+    if (element) {
+      sectionsRef.current.set(timeline, element);
+    }
+  };
+
+  return (
+    <MainLayout>
+      <ScrollTimeline
+        activeTimeline={activeTimeline}
+        onTimelineClick={handleTimelineClick}
+      />
+
+      {/* Timeline Sections */}
+      <div className="space-y-0">
+        <TimelineSection
+          timeline="past"
+          registerSection={registerSection}
+        />
+        <TimelineSection
+          timeline="present"
+          registerSection={registerSection}
+        />
+        <TimelineSection
+          timeline="future"
+          registerSection={registerSection}
+        />
+      </div>
+
+      {/* Full Width Sections Below */}
+      <TechnologyCarousel />
+      <ContactInfo />
+    </MainLayout>
+  );
+}
 
 function App() {
   return (
     <ThemeProvider>
       <PortfolioProvider>
-        <MainLayout>
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(400px,500px)_1fr] gap-8 lg:gap-12 mb-16">
-            {/* Left Column: Avatar Container */}
-            <div className="flex justify-center lg:justify-end">
-              <AvatarContainer />
-            </div>
-
-            {/* Right Column: Info Panel */}
-            <div className="flex items-start">
-              <InfoPanel />
-            </div>
-          </div>
-
-          {/* Full Width Sections Below */}
-          <TechnologyCarousel />
-          <ContactInfo />
-        </MainLayout>
+        <AppContent />
       </PortfolioProvider>
     </ThemeProvider>
   );

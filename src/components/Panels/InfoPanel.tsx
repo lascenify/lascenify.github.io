@@ -5,9 +5,15 @@ import { panelVariants } from '@/utils/animations';
 import { WorkPanel } from './WorkPanel';
 import { ProjectsPanel } from './ProjectsPanel';
 import { LeisurePanel } from './LeisurePanel';
+import type { Timeline } from '@/types/portfolio.types';
 
-export const InfoPanel: React.FC = () => {
-  const { timeline, context } = usePortfolio();
+interface InfoPanelProps {
+  timeline: Timeline;
+}
+
+export const InfoPanel: React.FC<InfoPanelProps> = ({ timeline }) => {
+  const { contexts } = usePortfolio();
+  const context = contexts[timeline];
 
   return (
     <div className="w-full">

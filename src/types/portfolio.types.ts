@@ -43,7 +43,7 @@ export interface AvatarConfig {
 
 export interface PortfolioState {
   timeline: Timeline;
-  context: Context;
+  contexts: Record<Timeline, Context>;
   language: Language;
 }
 

@@ -1,9 +1,10 @@
 import React, { createContext, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Timeline, Context, Language, PortfolioState } from '@/types/portfolio.types';
 
 interface PortfolioContextValue extends PortfolioState {
   setTimeline: (timeline: Timeline) => void;
-  setContext: (context: Context) => void;
+  setContext: (timeline: Timeline, context: Context) => void;
   setLanguage: (language: Language) => void;
 }
 
@@ -14,26 +15,37 @@ interface PortfolioProviderProps {
 }
 
 export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({ children }) => {
+  const { i18n } = useTranslation();
   const [timeline, setTimelineState] = useState<Timeline>('present');
-  const [context, setContext] = useState<Context>('work');
-  const [language, setLanguage] = useState<Language>('es');
+  const [contexts, setContexts] = useState<Record<Timeline, Context>>({
+    past: 'work',
+    present: 'work',
+    future: 'work',
+  });
+  // Default language is Spanish
+  const [language, setLanguageState] = useState<Language>('es');
 
-  // Wrapper para setTimeline que resetea el contexto a 'work' si sales de 'present'
+  const setLanguage = useCallback((newLanguage: Language) => {
+    setLanguageState(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  }, [i18n]);
+
   const setTimeline = useCallback((newTimeline: Timeline) => {
     setTimelineState(newTimeline);
+  }, []);
 
-    // Si el timeline no es 'present', resetear el contexto a 'work'
-    // porque past y future solo tienen la sección work
-    if (newTimeline !== 'present') {
-      setContext('work');
-    }
+  const setContext = useCallback((timeline: Timeline, context: Context) => {
+    setContexts(prev => ({
+      ...prev,
+      [timeline]: context,
+    }));
   }, []);
 
   return (
     <PortfolioContext.Provider
       value={{
         timeline,
-        context,
+        contexts,
         language,
         setTimeline,
         setContext,
