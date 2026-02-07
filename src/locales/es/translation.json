@@ -58,5 +58,47 @@
   },
   "avatar": {
     "fallbackAlt": "Avatar"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "¡Bienvenido a mi Portfolio! 👋",
+      "description": "Te guiaré en un breve tour para que aproveches al máximo la experiencia.",
+      "icon": "🎯"
+    },
+    "step2": {
+      "title": "Línea de Tiempo 🕐⚡✨",
+      "description": "Usa la línea temporal del lado izquierdo para navegar entre Pasado, Presente y Futuro.",
+      "icon": "📍"
+    },
+    "step3": {
+      "title": "Contextos 💼📱🎮",
+      "description": "En cada etapa temporal, puedes explorar diferentes contextos: Trabajo, Proyectos y Ocio.",
+      "icon": "🔄"
+    },
+    "step4": {
+      "title": "¡Explora! 🚀",
+      "description": "Haz scroll para descubrir mi trayectoria, o usa la línea temporal para saltar entre secciones.",
+      "icon": "✨"
+    },
+    "buttons": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "start": "¡Empezar!",
+      "skip": "Saltar tutorial"
+    }
+  },
+  "scrollHint": {
+    "text": "Scroll para explorar"
+  },
+  "keyboard": {
+    "help": {
+      "title": "⌨️ Atajos de Teclado",
+      "previousTimeline": "Timeline anterior",
+      "nextTimeline": "Timeline siguiente",
+      "goToTimeline": "Ir a Pasado/Presente/Futuro",
+      "goToStart": "Ir al inicio",
+      "goToEnd": "Ir al final",
+      "showHelp": "Mostrar esta ayuda"
+    }
   }
 }

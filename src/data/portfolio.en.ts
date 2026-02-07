@@ -85,7 +85,7 @@ export const portfolioDataEN: Record<Timeline, TimelineData> = {
         id: 'project-present-1',
         name: 'Brot Veinal',
         description: 'Online platform for exchanging plant cuttings and plants among neighbors',
-        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'shadcn/ui', 'Tailwind CSS', 'Vercel', 'shadcn/ui'],
+        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Vercel', 'shadcn/ui'],
         gallery: [
           '/projects/brot-veinal-1.jpg',
           '/projects/brot-veinal-2.jpg',

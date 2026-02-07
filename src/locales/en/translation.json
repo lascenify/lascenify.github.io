@@ -58,5 +58,47 @@
   },
   "avatar": {
     "fallbackAlt": "Avatar"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Welcome to my Portfolio! 👋",
+      "description": "I'll guide you through a brief tour so you can make the most of the experience.",
+      "icon": "🎯"
+    },
+    "step2": {
+      "title": "Timeline 🕐⚡✨",
+      "description": "Use the timeline on the left side to navigate between Past, Present, and Future.",
+      "icon": "📍"
+    },
+    "step3": {
+      "title": "Contexts 💼📱🎮",
+      "description": "In each time period, you can explore different contexts: Work, Projects, and Leisure.",
+      "icon": "🔄"
+    },
+    "step4": {
+      "title": "Explore! 🚀",
+      "description": "Scroll to discover my journey, or use the timeline to jump between sections.",
+      "icon": "✨"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "start": "Let's Start!",
+      "skip": "Skip tutorial"
+    }
+  },
+  "scrollHint": {
+    "text": "Scroll to explore"
+  },
+  "keyboard": {
+    "help": {
+      "title": "⌨️ Keyboard Shortcuts",
+      "previousTimeline": "Previous timeline",
+      "nextTimeline": "Next timeline",
+      "goToTimeline": "Go to Past/Present/Future",
+      "goToStart": "Go to start",
+      "goToEnd": "Go to end",
+      "showHelp": "Show this help"
+    }
   }
 }

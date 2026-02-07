@@ -29,7 +29,7 @@ export const ContextCarousel: React.FC<ContextCarouselProps> = ({ timeline }) =>
             <motion.button
               key={ctx}
               onClick={() => handleContextChange(ctx)}
-              className={`relative flex flex-col items-center justify-center w-fit min-w-24 h-24 p-3 md:p-4 rounded-xl transition-all border-2 ${
+              className={`relative flex flex-col items-center justify-center w-fit min-w-16 md:min-w-24 h-16 md:h-24 p-2 md:p-4 rounded-lg md:rounded-xl transition-all border-2 ${
                 isActive
                   ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl border-transparent'
                   : 'bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-600 hover:border-primary-light dark:hover:border-primary-dark'
@@ -56,12 +56,12 @@ export const ContextCarousel: React.FC<ContextCarouselProps> = ({ timeline }) =>
               {/* Active Indicator */}
               {isActive && (
                 <motion.div
-                  className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-lg"
+                  className="absolute -top-1 md:-top-2 -right-1 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-green-500 rounded-full flex items-center justify-center shadow-lg"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 15 }}
                 >
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-2 h-2 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </motion.div>
@@ -69,7 +69,7 @@ export const ContextCarousel: React.FC<ContextCarouselProps> = ({ timeline }) =>
 
               {/* Emoji Icon */}
               <motion.span
-                className="text-4xl md:text-5xl mb-2"
+                className="text-2xl md:text-5xl mb-0.5 md:mb-2"
                 animate={{
                   rotate: isActive ? [0, -10, 10, -10, 0] : 0
                 }}
@@ -79,7 +79,7 @@ export const ContextCarousel: React.FC<ContextCarouselProps> = ({ timeline }) =>
               </motion.span>
 
               {/* Label */}
-              <span className="text-xs md:text-sm font-bold uppercase tracking-wider">
+              <span className="text-[10px] md:text-sm font-bold uppercase tracking-wider">
                 {t(`contexts.${ctx}`)}
               </span>
 

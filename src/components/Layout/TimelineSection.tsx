@@ -41,18 +41,18 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
       className="min-h-screen pt-20 pb-16 lg:py-24"
     >
       <div className="container mx-auto px-4">
-        {/* Section Header - Hidden on mobile since timeline shows it */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="hidden lg:block text-center mb-12 lg:mb-16"
+          className="text-center mb-8 lg:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl lg:text-5xl font-bold mb-3 lg:mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             {label}
           </h2>
-          <div className="w-24 h-1 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
+          <div className="w-16 lg:w-24 h-0.5 lg:h-1 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
         </motion.div>
 
         {/* Content Layout */}
