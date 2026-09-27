@@ -56,19 +56,21 @@ export const WorkPanel: React.FC<WorkPanelProps> = ({ timeline }) => {
                 {exp.description}
               </p>
 
-              <div>
-                <h4 className="font-semibold mb-2">{t('work.technologies')}</h4>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {exp.technologies.length > 0 && (
+                <div>
+                  <h4 className="font-semibold mb-2">{t('work.technologies')}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {exp.highlights && exp.highlights.length > 0 && (
                 <div>
@@ -142,19 +144,21 @@ export const WorkPanel: React.FC<WorkPanelProps> = ({ timeline }) => {
                     {experiences[currentIndex].description}
                   </p>
 
-                  <div>
-                    <h4 className="font-semibold mb-2">{t('work.technologies')}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {experiences[currentIndex].technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  {experiences[currentIndex].technologies.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold mb-2">{t('work.technologies')}</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {experiences[currentIndex].technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 text-primary-light dark:text-primary-dark rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {experiences[currentIndex].highlights && experiences[currentIndex].highlights!.length > 0 && (
                     <div>

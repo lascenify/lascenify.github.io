@@ -29,6 +29,21 @@ export const portfolioDataEN: Record<Timeline, TimelineData> = {
           'Focus on efficiency and frontend development best practices',
         ],
       },
+      {
+        id: 'work-past-3',
+        title: 'Senior Frontend Developer',
+        company: 'ElParking - Mutua Madrileña',
+        description: 'Frontend team co-leadership, development of new features and optimization of the main application',
+        period: '2022 - 2026',
+        technologies: ['React', 'TypeScript', 'Next.js', 'Jest', 'React Testing Library', 'HTML', 'CSS', 'GitHub Actions', 'Docker', 'Lerna', 'Webpack', 'Vite', 'Node.js', 'PHP'],
+        highlights: [
+          'Migration from monolithic application to microservices',
+          'Implementation of new applications from scratch with Next.js and React',
+          'Mentoring of 3 other frontend developers',
+          'Optimization and technology migration to improve performance and user experience',
+          'Evolutions on existing features and development of new features for the main application',
+        ],
+      },
     ],
     projects: [
       {
@@ -67,17 +82,10 @@ export const portfolioDataEN: Record<Timeline, TimelineData> = {
       {
         id: 'work-present-1',
         title: 'Senior Frontend Developer',
-        company: 'ElParking - Mutua Madrileña',
-        description: 'Frontend team co-leadership, development of new features and optimization of the main application',
-        period: '2022 - Present',
-        technologies: ['React', 'TypeScript', 'Next.js', 'Jest', 'React Testing Library', 'HTML', 'CSS', 'GitHub Actions', 'Docker', 'Lerna', 'Webpack', 'Vite', 'Node.js', 'PHP'],
-        highlights: [
-          'Migration from monolithic application to microservices',
-          'Implementation of new applications from scratch with Next.js and React',
-          'Mentoring of 3 other frontend developers',
-          'Optimization and technology migration to improve performance and user experience',
-          'Evolutions on existing features and development of new features for the main application',
-        ],
+        company: 'Nuuk Technologies',
+        description: 'Mainly frontend development with React and TypeScript, also contributing to the Go backend',
+        period: 'Apr 2026 - Present',
+        technologies: ['React', 'TypeScript', 'Go'],
       },
     ],
     projects: [
