@@ -127,6 +127,18 @@ export const portfolioDataES: Record<Timeline, TimelineData> = {
         description: 'Sistema de automatización doméstica con control centralizado y personalización avanzada',
         technologies: ['Raspberry Pi', 'Home Assistant'],
       },
+      {
+        id: 'project-present-4',
+        name: 'Cuatro Paredes',
+        description: 'Web narrativa e inmersiva sobre el problema de la vivienda en València: seis historias interactivas, en valenciano y castellano, de los vecinos de una finca de Benimaclet comprada por un fondo de inversión. Cada decisión cambia la fachada y el resto de historias, y al final se muestran datos reales con sus fuentes y lo que decidió la gente.',
+        technologies: ['TypeScript', 'Vite', 'Ink', 'Three.js', 'Cloudflare Workers', 'Upstash Redis'],
+        link: 'https://cuatroparedes.casa',
+        gallery: [
+          '/projects/cuatro-paredes-1.jpg',
+          '/projects/cuatro-paredes-2.jpg',
+          '/projects/cuatro-paredes-3.jpg',
+        ],
+      },
     ],
     leisure: [
       {
